@@ -1,0 +1,662 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace;
+  background-color: #252833 !important;
+}
+nav {
+  background-color: #252833;
+  height: 80px;
+  width: 100%;
+}
+nav img {
+  height: 50px;
+  width: 50px;
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: 400;
+}
+label.logo span {
+  margin-left: 5px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  /* margin: 0 5px; */
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  /* border: 1px solid; */
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  transition: 0.5s;
+}
+nav ul li :hover {
+  background: linear-gradient(#e66465, #9198e5);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.checkbutton {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* @media (max-width: 1195px) {
+  label.logo {
+    font-size: 25px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+} */
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 25px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1158px) {
+  .checkbutton {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #252833;
+    top: 80px;
+    left: -100%;
+    transition: all 0.5s;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    /* color: #0082e6; */
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbutton {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #252833;
+    top: 80px;
+    left: -100%;
+    transition: all 0.5s;
+    text-align: center;
+    z-index: 99;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    /* color: #0082e6; */
+  }
+}
+
+@media (max-width: 500px) {
+  label.logo {
+    font-size: 15px;
+    padding-left: 25px;
+  }
+}
+@media (max-width: 353px) {
+  label.logo {
+    font-size: 15px;
+    padding: 0;
+  }
+}
+#check:checked ~ ul {
+  left: 0;
+}
+
+/* home section start  */
+
+#home {
+  color: white;
+}
+
+.home-img {
+  height: auto;
+  width: auto;
+  overflow: hidden;
+}
+
+.home-img img {
+  /* border-radius: 50px; */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: 0.3s;
+}
+
+.home-img img:hover {
+  transform: scale(1.2);
+}
+
+/* home section stop  */
+
+/* About start */
+
+#MySkill {
+  color: white;
+}
+
+.skill-box {
+  height: 250px;
+  border-radius: 25px;
+  color: #333;
+  padding: 5px 25px 25px 25px;
+}
+
+.skill-box .title {
+  color: white;
+  padding: 10px;
+  display: block;
+  font-family: monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.skill-bar {
+  height: 8px;
+  width: 100%;
+  background: rgba(166, 152, 152, 0.3);
+  border-radius: 5px;
+}
+
+.html .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 90%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: html infinite 5.1s linear;
+}
+
+@keyframes html {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 75%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+/* For Css */
+
+.CSS .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 80%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: CSS infinite 5.1s linear;
+}
+
+@keyframes CSS {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 75%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+/* For JS */
+
+.JS .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 85%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: JS infinite 5.1s linear;
+}
+
+@keyframes JS {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 75%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+/* For Bootstrap */
+
+.bootstrap .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 25%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: bootstrap infinite 5.1s linear;
+}
+
+@keyframes bootstrap {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 75%;
+  }
+  100% {
+    width: 95%;
+  }
+}
+
+/* For Angular */
+
+.Angular .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 70%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: Angular infinite 5.1s linear;
+}
+
+@keyframes Angular {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+/* For JAVA */
+
+.JAVA .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 90%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: JAVA infinite 5.1s linear;
+}
+
+@keyframes JAVA {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 75%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+/* For JDBC */
+
+.JDBC .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 80%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: JDBC infinite 5.1s linear;
+}
+
+@keyframes JDBC {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 75%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+/* For servlet */
+
+.servlet .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 90%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: servlet infinite 5.1s linear;
+}
+
+@keyframes servlet {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 75%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+/* For JSP */
+
+.JSP .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 70%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: JSP infinite 5.1s linear;
+}
+
+@keyframes JSP {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 60%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+/* For Hibernate */
+
+.Hibernate .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 80%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: Hibernate infinite 5.1s linear;
+}
+
+@keyframes Hibernate {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 65%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+/* For Spring */
+
+.Spring .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 75%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: Spring infinite 5.1s linear;
+}
+
+@keyframes Spring {
+  0% {
+    width: 30%;
+  }
+
+  25% {
+    width: 45%;
+  }
+
+  50% {
+    width: 65%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+/* For Spring_Boot */
+
+.Spring_Boot .skill-per {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 95%;
+  background: rgba(113, 164, 203);
+  border-radius: 5px;
+  animation: Spring_Boot infinite 5.1s ease-in-out;
+}
+
+@keyframes Spring_Boot {
+  0% {
+    width: 30%;
+  }
+
+  /* 25%{
+    width:  45%;
+  }
+
+  50%{
+    width: 70%;
+  } */
+  100% {
+    width: 95%;
+  }
+}
+
+.skill-per .progress {
+  position: absolute;
+  right: -14px;
+  top: -32px;
+  color: white;
+  background-color: #252833;
+  font-weight: 600;
+}
+
+#Contact {
+  position: relative;
+  top: 150px;
+  color: white;
+}
+
+#contactform {
+  color: #252833;
+  background: transparent;
+}
+
+#contactform button {
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+#Connectwithme {
+  position: relative;
+  top: 18rem;
+}
+
+.sociallogos {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sociallogos a {
+  text-decoration: none;
+}
+.sociallogos a :hover {
+  color: none;
+}
+
+.sociallogos i {
+  font-size: 75px;
+}
+
+.github {
+  color: white;
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d,
+    #f56040,
+    #ffdc80
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.whatsapp {
+  color: #25d366;
+  background: whitesmoke;
+  -webkit-background-clip: text;
+}
+
+@media (max-width: 990px) {
+  .sociallogos i {
+    font-size: 65px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sociallogos i {
+    font-size: 55px;
+    margin: 10px;
+  }
+  .sociallogos {
+    justify-content: center;
+  }
+}
